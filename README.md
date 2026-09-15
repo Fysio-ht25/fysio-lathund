@@ -5,9 +5,7 @@ En snabbreferens för den fysioterapeutiska undersökningen: vad som testas, hur
 vad fyndet betyder och vad som följer av det. Byggd för fysioterapeutprogrammet vid
 Karolinska Institutet, användbar på telefon i undersökningsrummet och utskriven som täta ark.
 
-**👉 [Öppna lathunden](https://ANVÄNDARNAMN.github.io/fysio-lathund/)**
-
-> Byt ut länken ovan mot din egen GitHub Pages-adress när sidan är publicerad.
+**👉 [Öppna lathunden](https://fysio-ht25.github.io/fysio-lathund/)**
 
 ---
 
