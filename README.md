@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32240398/README.md)
 # Fysio lathund
 
 En snabbreferens för den fysioterapeutiska undersökningen: vad som testas, hur det utförs,
@@ -11,22 +10,25 @@ Karolinska Institutet, användbar på telefon i undersökningsrummet och utskriv
 
 ## Vad den innehåller
 
-Elva moduler: fysioterapiprocessen, röda flaggor, sex kroppsregioner, journalföring och
-referensdata.
+Tolv moduler: fysioterapiprocessen, röda flaggor, neurologisk undersökning, sex kroppsregioner,
+journalföring och referensdata.
 
-- **49 testkort** med utgångsläge, utförande, positivt fynd, tolkning, nästa steg och —
+- **48 testkort** med utgångsläge, utförande, positivt fynd, tolkning, nästa steg och —
   där det finns underlag — sensitivitet och specificitet med källa.
-- **48 videolänkar** till demonstration av testerna, mestadels Physiotutors.
+- **Videolänk på varje testkort** — demonstration av testet, mestadels Physiotutors.
 - **9 flödesscheman** vid de ställen där undersökningen verkligen förgrenar sig:
   akut knätrauma, Ottawa-reglerna vid fotledstrauma, trippelsortering vid ländryggssmärta,
   nervrot kontra perifer nerv, triagering av röda flaggor med flera.
-- **18 anatomifigurer**, skelett och muskulatur för varje region samt dermatom, plexus
-  brachialis och plexus lumbalis.
+- **20 anatomifigurer**, skelett och muskulatur för varje region samt dermatom, plexus
+  brachialis och lumbalis, sensoriska banor och tractus corticospinalis.
 - **Referensdata**: rörlighetsnormalvärden, myotom/dermatom/reflex C5–S1, MRC-skalan,
   end-feel, loose-packed positioner, Beighton, balanstestens riktvärden och dosering.
 
 Sök med fältet högst upp — sökningen träffar även innehåll i hopfällda avsnitt. `/` hoppar
 till sökrutan. Ctrl+P skriver ut i två spalter.
+
+Det finns även en **[e-boksversion](fysio_lathund.epub)** för läsplatta, Apple Books eller
+Google Play Böcker — samma innehåll, med kapitelnavigation i stället för sök och flikar.
 
 ---
 
@@ -43,7 +45,9 @@ Vid konflikt mellan lathunden och kurslitteraturen gäller kurslitteraturen.
 Diagnostiska träffsäkerhetsvärden anges bara när de går att belägga med en namngiven källa.
 Där underlaget saknas eller är svagt står det uttryckligen i texten.
 
-**Hittat ett fel?** Öppna en issue här på GitHub, eller skicka en pull request.
+**Hittat ett fel?** Öppna en [issue](https://github.com/fysio-ht25/fysio-lathund/issues),
+eller skicka en pull request. Rättningar och tillägg tas tacksamt emot — särskilt saknade
+videolänkar, felaktiga normalvärden och tester som behöver tydligare utförandebeskrivning.
 
 ---
 
@@ -53,20 +57,25 @@ Där underlaget saknas eller är svagt står det uttryckligen i texten.
 vid nästa bygge.
 
 ```bash
-python build.py
+python build.py        # webbversionen, index.html
+python build_epub.py   # e-boken, fysio_lathund.epub
 ```
 
-Inga beroenden utöver Python 3. Skriptet läser `source/*.md`, bäddar in bilderna från
-`images/` som base64 och skriver en enda fristående HTML-fil.
+Inga beroenden utöver Python 3. `build.py` läser `source/*.md`, bäddar in bilderna från
+`images/` som base64 och skriver en enda fristående HTML-fil. `build_epub.py` läser samma
+källa men skriver en EPUB där allt är utfällt och bilderna ligger som separata filer.
 
 ### Struktur
 
 ```
-index.html              publicerad, byggd fil
-build.py                bygger HTML från källan
+index.html              publicerad webbversion
+fysio_lathund.epub      e-boksversion
+build.py                bygger webbversionen
+build_epub.py           bygger e-boken
 source/
   00_process.md         fysioterapiprocessen och beslutslogiken
   05_flaggor.md         röda, gula, orange och blå flaggor
+  15_neuro.md           neurologisk och somatosensorisk undersökning
   20_nacke.md … 70_fot.md   regionmoduler
   80_journal.md         journalföring
   90_referens.md        referenstabeller och bildkällor
