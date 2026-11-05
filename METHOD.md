@@ -167,8 +167,10 @@ Uppskattningen ska **överskatta** — en för trång ruta får text att spilla 
 ## 8. Kontroller före leverans
 
 ```bash
-python build.py && python build_epub.py
+python build.py
 ```
+
+EPUB (`build_epub.py`) bygges bara på uttrycklig begäran (användarregel 2026-11-05).
 
 - Siffrorna i byggutskriften stämmer med förväntan.
 - Inga `@flow`, `@fig`, `@meta` eller `!!!` kvar i utdata (skulle betyda att ett block inte tolkats).
