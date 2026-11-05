@@ -10,8 +10,8 @@ Karolinska Institutet, användbar på telefon i undersökningsrummet och utskriv
 
 ## Vad den innehåller
 
-Tolv moduler: fysioterapiprocessen, röda flaggor, neurologisk undersökning, sex kroppsregioner,
-journalföring och referensdata.
+Tretton moduler plus fliken Tester: fysioterapiprocessen, röda flaggor, neurologisk undersökning, sex kroppsregioner,
+slutenvård, journalföring, ICF och referensdata. Menyn är en hamburgermeny med grupperade flikar.
 
 - **48 testkort** med utgångsläge, utförande, positivt fynd, tolkning, nästa steg och —
   där det finns underlag — sensitivitet och specificitet med källa.
@@ -77,6 +77,8 @@ source/
   05_flaggor.md         röda, gula, orange och blå flaggor
   15_neuro.md           neurologisk och somatosensorisk undersökning
   20_nacke.md … 70_fot.md   regionmoduler
+  75_slutenvard.md          avdelningsfysioterapi (1FY027)
+  82_icf.md                 ICF
   80_journal.md         journalföring
   90_referens.md        referenstabeller och bildkällor
   _video.tsv            testnamn → videolänk
